@@ -17,7 +17,7 @@ class Clock extends React.Component
     }
     startTime() {
         this.timer = setInterval(() => {
-            this.setState(() => ({ date: new Date()}));
+            this.setState(() => ({ time: new Date()}));
         }, 1000);
     }
     toggleDate() {
@@ -27,7 +27,7 @@ class Clock extends React.Component
         return (
             <div className="root">
                 <Panel toggleDate={this.toggleDate} dateOn={this.state.isDateVisible} />
-                <Display date={this.state.time} isDateVisible={this.state.isDateVisible} />
+                <Display time={this.state.time} isDateVisible={this.state.isDateVisible} />
             </div>
         );
     }
